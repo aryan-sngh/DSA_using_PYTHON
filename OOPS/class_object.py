@@ -50,3 +50,21 @@
 # dog1.eat()
 # dog1.sleep()
 # dog1.bark()
+
+#example 4 polymorphism
+# class Polygon:
+#     def render(self):
+#         print("rendering polygon...")
+        
+# class Square(Polygon):
+#     def render(self):
+#         print("rendering square...")
+    
+# class Circle(Polygon):
+#     def render(self):
+#         print("rendering cirlce...")
+        
+# s1 = Square()
+# s1.render()
+# c1 = Circle()
+# c1.render()
