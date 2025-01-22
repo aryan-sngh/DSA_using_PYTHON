@@ -33,3 +33,20 @@
 # #change the price using setter
 # c.set_max_price(1000)
 # c.sell()
+
+
+#example 3 inheritance
+# class Animal:
+#     def eat(self):
+#         print("i can eat")
+#     def sleep(self):
+#         print("i can sleep")
+        
+# class Dog(Animal):
+#     def bark(self):
+#         print("i ca  bark! woof woof!!")
+        
+# dog1 = Dog()
+# dog1.eat()
+# dog1.sleep()
+# dog1.bark()
