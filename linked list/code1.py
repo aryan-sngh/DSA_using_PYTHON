@@ -9,6 +9,23 @@
 # first.next.next = Node("Drop X Out")
 
 
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
+        
+# class SinglyLinkedList:
+#     def __init__(self,val):
+#         new_node = Node(val)
+#         self.head = new_node
+#         self.tail = self.head
+#         self.length = 1
+        
+# #creating the linked list with an initial value
+# first = SinglyLinkedList(10)
+        
+        
+#PUSH MEHTHOD
 class Node:
     def __init__(self,val):
         self.val = val
@@ -16,13 +33,24 @@ class Node:
         
 class SinglyLinkedList:
     def __init__(self,val):
-        new_node = Node(val)
-        self.head = new_node
+        newNode = Node(val)
+        self.head = newNode
         self.tail = self.head
         self.length = 1
-        
-#creating the linked list with an initial value
-first = SinglyLinkedList(10)
-        
-        
+    
+    def push(self,val):
+        newNode = Node(val)
+        if not self.head:
+            self.head = newNode
+            self.tail = self.head
+        else:
+            self.tail.next = newNode
+            self.tail = newNode
+        self.length +=1
+        return self
+first  = SinglyLinkedList(20)
+first.push(25)  
+            
+            
+            
         
