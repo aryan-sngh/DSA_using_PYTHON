@@ -50,6 +50,8 @@ class SinglyLinkedList:
         return self
 first  = SinglyLinkedList(20)
 first.push(25)  
+first.push(24)
+first.push(22)
             
             
             
