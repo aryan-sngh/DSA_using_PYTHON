@@ -65,14 +65,23 @@ class SinglyLinkedList:
             self.head=None
             self.tail=None
         return temp
-           
-       
+    
+    #unshift method
+    def unshift(self,val):
+        newNode = Node(val)
+        newNode.next = self.head
+        self.head = newNode
+        self.length+=1
+        return self
+               
     
 first = SinglyLinkedList(20)
 first.push(25)  
 first.push(24)
 first.push(22)
 first.pop()
+first.unshift(13)
+first.unshift(10)
 
             
             
