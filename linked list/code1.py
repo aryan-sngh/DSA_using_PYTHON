@@ -73,7 +73,20 @@ class SinglyLinkedList:
         self.head = newNode
         self.length+=1
         return self
-               
+    
+    #shift method
+    def shift(self):
+        if not self.head:
+            return None
+        temp = self.head
+        self.head = self.head.next
+        temp.next = None
+        self.length-=1
+        if self.length == 0:
+            self.head = None
+            self.tail = None
+        return temp
+        
     
 first = SinglyLinkedList(20)
 first.push(25)  
@@ -82,6 +95,7 @@ first.push(22)
 first.pop()
 first.unshift(13)
 first.unshift(10)
+first.shift()
 
             
             
