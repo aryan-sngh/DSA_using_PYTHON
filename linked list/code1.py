@@ -86,16 +86,25 @@ class SinglyLinkedList:
             self.head = None
             self.tail = None
         return temp
+    #get method
+    def get(self,index):
+        if index<0 or index>=self.length:
+            return None
+        temp = self.head
+        for i in range(0,index):
+            temp = temp.next
+        return temp
         
     
 first = SinglyLinkedList(20)
 first.push(25)  
 first.push(24)
 first.push(22)
-first.pop()
-first.unshift(13)
-first.unshift(10)
-first.shift()
+# first.pop()
+# first.unshift(13)
+# first.unshift(10)
+# first.shift()
+first.get(2)
 
             
             
