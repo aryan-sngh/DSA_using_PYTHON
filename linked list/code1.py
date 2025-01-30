@@ -91,8 +91,10 @@ class SinglyLinkedList:
         if index<0 or index>=self.length:
             return None
         temp = self.head
-        for i in range(0,index):
+        i=0
+        while i<index:
             temp = temp.next
+            i+=1
         return temp
         
     
