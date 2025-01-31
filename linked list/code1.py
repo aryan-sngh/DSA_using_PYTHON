@@ -97,6 +97,14 @@ class SinglyLinkedList:
             i+=1
         return temp
         
+    def set(self,index,val):
+        temp = self.get(index)
+        if temp:
+            temp.val = val
+            return True
+        else:
+            return False
+            
     
 first = SinglyLinkedList(20)
 first.push(25)  
@@ -107,6 +115,7 @@ first.push(22)
 # first.unshift(10)
 # first.shift()
 first.get(2)
+first.set(2,100)
 
             
             
