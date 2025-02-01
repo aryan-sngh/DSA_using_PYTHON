@@ -104,19 +104,36 @@ class SinglyLinkedList:
             return True
         else:
             return False
+        
+    def insert(self,index,val):
+        if index==0:
+            return self.unshift(val)
+        if index==self.length:
+            return self.push(val)
+        if index<0 or index>self.length:
+            return None
+        newNode = Node(val)
+        temp = self.get(index-1)
+        newNode.next = temp.next
+        temp.next = newNode
+        self.length+=1
+        return self
+            
             
     
 first = SinglyLinkedList(20)
 first.push(25)  
 first.push(24)
 first.push(22)
-# first.pop()
-# first.unshift(13)
-# first.unshift(10)
-# first.shift()
+first.pop()
+first.unshift(13)
+first.unshift(10)
+first.shift()
 first.get(2)
 first.set(2,100)
-
+first.insert(0,10)
+first.insert(4,12)
+first.insert(2,15)
             
             
             
