@@ -96,7 +96,7 @@ class SinglyLinkedList:
             temp = temp.next
             i+=1
         return temp
-        
+    #set method    
     def set(self,index,val):
         temp = self.get(index)
         if temp:
@@ -104,7 +104,7 @@ class SinglyLinkedList:
             return True
         else:
             return False
-        
+    #insert method     
     def insert(self,index,val):
         if index==0:
             return self.unshift(val)
@@ -120,7 +120,7 @@ class SinglyLinkedList:
         return self
             
             
-    
+#creating object....  
 first = SinglyLinkedList(20)
 first.push(25)  
 first.push(24)
