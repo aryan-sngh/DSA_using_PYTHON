@@ -118,6 +118,24 @@ class SinglyLinkedList:
         temp.next = newNode
         self.length+=1
         return self
+    
+    #remove method
+    def remove(self,index):
+        if index == 0:
+            return self.shift()
+        if index == self.length-1:
+            return self.pop()
+        if index<0 or index>self.length:
+            return None
+        
+        before = self.get(index - 1)  # Get the node before the one to be removed
+        temp = before.next  # Node to be removed
+
+        before.next = temp.next  # Bypass the node to be removed
+        temp.next = None  # Disconnect it
+        self.length -= 1  
+
+        return temp       
             
             
 #creating object....  
@@ -125,15 +143,16 @@ first = SinglyLinkedList(20)
 first.push(25)  
 first.push(24)
 first.push(22)
-first.pop()
-first.unshift(13)
-first.unshift(10)
-first.shift()
-first.get(2)
-first.set(2,100)
-first.insert(0,10)
-first.insert(4,12)
-first.insert(2,15)
+# first.pop()
+# first.unshift(13)
+# first.unshift(10)
+# first.shift()
+# first.get(2)
+# first.set(2,100)
+# first.insert(0,10)
+# first.insert(4,12)
+# first.insert(2,15)
+first.remove(2)
             
             
             
