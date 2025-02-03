@@ -125,7 +125,7 @@ class SinglyLinkedList:
             return self.shift()
         if index == self.length-1:
             return self.pop()
-        if index<0 or index>self.length:
+        if index<0 or index>=self.length:
             return None
         
         before = self.get(index - 1)  # Get the node before the one to be removed
