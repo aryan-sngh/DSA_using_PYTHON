@@ -135,14 +135,31 @@ class SinglyLinkedList:
         temp.next = None  # Disconnect it
         self.length -= 1  
 
-        return temp       
+        return temp     
+    
+    #reverse method
+    def reverse(self):
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp 
+        next = temp.next 
+        prev = None
+        
+        i=0
+        while(i<self.length):
+            next = temp.next
+            temp.next = prev
+            prev = temp
+            temp = next 
+            i+=1
+        return self
             
             
 #creating object....  
-first = SinglyLinkedList(20)
-first.push(25)  
-first.push(24)
-first.push(22)
+first = SinglyLinkedList(10)
+first.push(20)  
+first.push(30)
+first.push(40)
 # first.pop()
 # first.unshift(13)
 # first.unshift(10)
@@ -152,8 +169,8 @@ first.push(22)
 # first.insert(0,10)
 # first.insert(4,12)
 # first.insert(2,15)
-first.remove(2)
-            
+# first.remove(2)
+first.reverse()
             
             
         
