@@ -162,12 +162,25 @@ class SinglyLinkedList:
             fast = fast.next.next
         
         return slow
-            
+    
+    def removeDuplicates(self):
+        temp = self.head
+        i = 0
+        while i<self.length:
+            if temp.val == temp.next.val:
+                self.remove(i)
+            temp = temp.next
+            i+=1
+        return self
+        
+                
+                    
             
             
 #creating object....  
 first = SinglyLinkedList(10)
 first.push(20)  
+first.push(20)
 first.push(30)
 first.push(40)
 # first.pop()
