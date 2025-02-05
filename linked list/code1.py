@@ -137,22 +137,32 @@ class SinglyLinkedList:
 
         return temp     
     
-    #reverse method
-    def reverse(self):
-        temp = self.head
-        self.head = self.tail
-        self.tail = temp 
-        next = temp.next 
-        prev = None
+    # #reverse method
+    # def reverse(self):
+    #     temp = self.head
+    #     self.head = self.tail
+    #     self.tail = temp 
+    #     next = temp.next 
+    #     prev = None
         
-        i=0
-        while(i<self.length):
-            next = temp.next
-            temp.next = prev
-            prev = temp
-            temp = next 
-            i+=1
-        return self
+    #     i=0
+    #     while(i<self.length):
+    #         next = temp.next
+    #         temp.next = prev
+    #         prev = temp
+    #         temp = next 
+    #         i+=1
+    #     return self
+    
+    def findMiddle(self):
+        slow = self.head
+        fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        
+        return slow
+            
             
             
 #creating object....  
@@ -170,7 +180,8 @@ first.push(40)
 # first.insert(4,12)
 # first.insert(2,15)
 # first.remove(2)
-first.reverse()
+# first.reverse()
+first.findMiddle()
             
             
         
