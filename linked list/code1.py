@@ -154,6 +154,7 @@ class SinglyLinkedList:
     #         i+=1
     #     return self
     
+    #find middle
     def findMiddle(self):
         slow = self.head
         fast = self.head
@@ -172,7 +173,8 @@ class SinglyLinkedList:
     #         temp = temp.next
     #         i+=1
     #     return None
-        
+    
+    #remove duplicates in sorted list
     def removeDuplicates(self):
         current = self.head
         while current!=None and current.next!=None:
