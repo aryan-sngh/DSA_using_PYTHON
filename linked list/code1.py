@@ -184,9 +184,28 @@ class SinglyLinkedList:
             else:
                 current = current.next 
         return self
-                
-                    
+    
+    #remove unsorted linked list
+    def removeUnsortedDuplicates(self):
+        if not self.head:
+            return None
+        uniqueValues = set()          
+        current = self.head
+        prev = None
+        
+        while current:
+            if current.val in uniqueValues:
+                prev.next = current.next
+                self.length-=1
+            else:
+                uniqueValues.add(current.val)
+                prev = current
+            current=current.next
             
+        self.tail = prev
+        return self
+                    
+    
             
 #creating object....  
 first = SinglyLinkedList(10)
@@ -194,6 +213,7 @@ first.push(20)
 first.push(20)
 first.push(30)
 first.push(40)
+first.push(30)
 first.push(40)
 # first.pop()
 # first.unshift(13)
