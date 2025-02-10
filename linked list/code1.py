@@ -177,7 +177,7 @@ class SinglyLinkedList:
     #remove duplicates in sorted list
     def removeDuplicates(self):
         current = self.head
-        while current!=None and current.next!=None:
+        while current and current.next:
             if current.val == current.next.val:
                 current.next = current.next.next
                 self.length -=1
@@ -233,6 +233,7 @@ first = SinglyLinkedList(0)
 first.push(1)  
 first.push(2)
 first.push(3)
+first.push(4)
 first.push(4)
 first.push(3)
 first.push(4)
