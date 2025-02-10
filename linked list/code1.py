@@ -204,17 +204,39 @@ class SinglyLinkedList:
             
         self.tail = prev
         return self
-                    
+    
+    #detectCycleStart
+    def detectCycleStart(self):
+        slow = self.head
+        fast = self.head
+        #find loop
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                break
+        else:
+            return None #agar loop nhi mila
+        
+        #finding starting point
+        entry = self.head
+        while slow!=entry:
+            entry = entry.next
+            slow = slow.next
+        return slow
+        
+    
     
             
 #creating object....  
-first = SinglyLinkedList(10)
-first.push(20)  
-first.push(20)
-first.push(30)
-first.push(40)
-first.push(30)
-first.push(40)
+first = SinglyLinkedList(0)
+first.push(1)  
+first.push(2)
+first.push(3)
+first.push(4)
+first.push(3)
+first.push(4)
+# first.tail.next = first.head
 # first.pop()
 # first.unshift(13)
 # first.unshift(10)
