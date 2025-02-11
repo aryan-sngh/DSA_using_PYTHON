@@ -1,0 +1,58 @@
+How do you define a Node class for a singly linked list in Python?
+
+How do you create a singly linked list in Python?
+
+Write a Python program to traverse a singly linked list.
+
+How do you insert a node at the beginning of a singly linked list?
+
+How do you insert a node at the end of a singly linked list?
+
+How do you insert a node after a given node in a singly linked list?
+
+How do you delete the first node of a singly linked list?
+
+How do you delete the last node of a singly linked list?
+
+How do you delete a node with a given value from a singly linked list?
+
+Write a Python program to count the number of nodes in a singly linked list.
+
+Write a Python program to search for a specific value in a singly linked list.
+
+How do you reverse a singly linked list?
+
+Write a Python program to check if a singly linked list is empty.
+
+How do you print the elements of a singly linked list in reverse order (without reversing the list)?
+
+Intermediate Problems
+How do you find the middle element of a singly linked list in one pass?
+
+Write a Python program to detect a loop in a singly linked list.
+
+How do you remove a loop in a singly linked list?
+
+Write a Python program to find the nth node from the end of a singly linked list.
+
+How do you merge two sorted singly linked lists into one sorted linked list?
+
+Write a Python program to remove duplicate nodes from a sorted singly linked list.
+
+How do you check if a singly linked list is a palindrome?
+
+Write a Python program to swap two nodes in a singly linked list.
+
+How do you find the intersection point of two singly linked lists?
+
+Write a Python program to rotate a singly linked list by k nodes.
+
+How do you add two numbers represented by two singly linked lists?
+
+Write a Python program to clone a singly linked list with random pointers.
+
+How do you sort a singly linked list using merge sort?
+
+How do you sort a singly linked list using bubble sort?
+
+Write a Python program to split a singly linked list into two halves.
