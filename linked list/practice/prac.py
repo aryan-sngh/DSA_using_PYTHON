@@ -308,36 +308,120 @@
         
         
 #10
-class Node:
-    def __init__(self,val):
-        self.val = val
-        self.next = None
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
 
-class Singly:
-    def __init__(self,val):
-        newNode = Node(val)
-        self.head = newNode
-        self.tail = self.head 
-        self.length = 1
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head 
+#         self.length = 1
         
-    def push(self,val):
-        newNode = Node(val)
-        if not self.head:
-            self.head = newNode
-            self.tail = self.head
-        else:
-            self.tail.next = newNode
-            self.tail = newNode
-        self.length+=1
-        return self
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         else:
+#             self.tail.next = newNode
+#             self.tail = newNode
+#         self.length+=1
+#         return self
     
-    def count(self):
-        if not self.head:
-            return None
+#     def count(self):
+#         if not self.head:
+#             return None
+#         temp = self.head
+#         count = 0
+#         while temp:
+#             count+=1
+#             temp = temp.next
+#         return count
+    
+# tt= None
             
+            
+#11
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next=  None
+
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head
+#         self.length  = 1
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         self.tail.next = newNode
+#         self.tail = newNode
+#         self.length+=1
+#         return self
+    
+#     def search(self,index):
+#         if index<0 or index>=self.length:
+#             return None
+#         temp = self.head
+#         i = 0
+#         while i<index:
+#             temp = temp.next
+#             i+=1
+#         return temp.val
+    
+# tt = None
         
+        
+#12
+# class Node:
+#     def __init__(self,val):            
+#         self.val = val
+#         self.next = None
+
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head
+#         self.length = 1
+    
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         self.tail.next = newNode
+#         self.tail = newNode
+#         self.length+=1
+#         return self
+    
+#     def reverse(self):
+#         if not self.head:
+#             return None
+#         temp = self.head
+#         self.head = self.tail
+#         self.tail = temp
+#         next = temp.next
+#         prev = None
+#         i = 0
+#         while i<self.length:
+#             next = temp.next
+#             temp.next = prev
+#             prev = temp
+#             temp = next
+#             i+=1
+#         return self
+    
+# tt = None
+
+#13
             
     
            
-
-        
