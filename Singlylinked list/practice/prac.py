@@ -422,6 +422,169 @@
 # tt = None
 
 #13
-            
+# class Node:
+#     def __init__(self,val):
+#         self.val = val 
+#         self.next = None
+        
+# class Singly:
+#     def __init__(self):
+#         self.head = None
+#         self.tail = self.head
+#         self.length = 0
+        
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         else:
+#             self.tail.next = newNode
+#             self.tail = newNode
+#         self.length+=1
+#         return self
     
-           
+#     def pop(self):
+#         if not self.head:
+#             return None
+#         pre = self.head 
+#         temp  =self.head
+#         while temp.next:
+#             pre = temp 
+#             temp = temp.next
+#         self.tail = pre
+#         self.tail.next = None
+#         self.length-=1
+#         if self.length==0:
+#             self.head = None
+#             self.tail = None
+#         return temp
+    
+#     def isEmpty(self):
+#         if not self.head and not self.tail:
+#             return "empty"
+#         else:
+#             return "not empty"
+    
+# tt = None
+
+#14
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
+    
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head
+#         self.length = 1
+    
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         else:
+#             self.tail.next = newNode
+#             self.tail = newNode
+#         self.length +=1
+#         return self
+    
+#     def get(self,index):
+#         if index<0 or index>self.length:
+#             return None
+#         i=1
+#         temp = self.head
+#         while i<index:
+#             temp = temp.next
+#             i+=1
+#         return temp.val
+    
+#     def printReverse(self):
+#         i= self.length
+#         while i>0:
+#             print(self.get(i),end="-->")
+#             i-=1
+#         print("none")
+        
+# tt = None        
+         
+
+#15
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
+        
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head
+#         self.length = 1
+        
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         else:
+#             self.tail.next = newNode
+#             self.tail = newNode
+#         self.length+=1
+#         return self
+    
+#     def findMiddle(self):
+#         slow = self.head
+#         fast = self.head
+#         while fast and fast.next:
+#             slow = slow.next
+#             fast = fast.next.next
+#         return slow
+    
+# tt = None
+            
+
+#16
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
+        
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head
+#         self.length = 1
+        
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         else:
+#             self.tail.next = newNode
+#             self.tail = newNode
+#         self.length+=1
+#         return self
+    
+#     def detectLoop(self):
+#         if not self.head:
+#             return None
+#         slow = self.head
+#         fast = self.head
+#         while fast and fast.next:
+#             slow = slow.next
+#             fast = fast.next.next
+#             if slow == fast:
+#                 return "loop" 
+            
+#         else:
+#             return "not loop"
+                     
+# tt = None
+   
+#17
