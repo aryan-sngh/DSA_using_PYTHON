@@ -691,42 +691,59 @@
     
     
 #22
-class Node:
-    def __init__(self,val):
-        self.val = val
-        self.next = None
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
 
-class Singly:
-    def __init__(self,val):
-        newNode = Node(val)
-        self.head = newNode
-        self.tail = self.head
-        self.length = 1
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head
+#         self.length = 1
         
-    def push(self,val):
-        newNode = Node(val)
-        if not self.head:
-            self.head = newNode
-            self.tail = self.head
-        else:
-            self.tail.next = newNode
-            self.tail = newNode
-        self.length+=1
-        return self
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         else:
+#             self.tail.next = newNode
+#             self.tail = newNode
+#         self.length+=1
+#         return self
     
-    def get(self,index):
-        if index<0 or index>=self.length:
-            return None
-        temp = self.head
-        i= 0
-        while i<index:
-            temp = temp.next
-            i+=1
-        return temp
+#     def get(self,index):
+#         if index<0 or index>=self.length:
+#             return None
+#         temp = self.head
+#         i= 0
+#         while i<index:
+#             temp = temp.next
+#             i+=1
+#         return temp
     
     
-tt = None
+#     def swap(self,index1,index2):
+#         if index1<0 or index1>=self.length or index2<0 or index2>=self.length:
+#             return None
+#         a = self.get(index1)
+#         b = self.get(index2)
+        
+#         if a.val == b.val:
+#             return None
+#         else:
+#             temp = b.val
+#             b.val = a.val
+#             a.val = temp
+#         return self
+            
+        
+    
+# tt = None
          
+
         
         
     
