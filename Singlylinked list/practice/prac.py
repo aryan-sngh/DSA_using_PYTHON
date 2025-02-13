@@ -588,3 +588,145 @@
 # tt = None
    
 #17
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
+        
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head
+#         self.length = 1
+        
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         else:
+#             self.tail.next = newNode
+#             self.tail = newNode
+#         self.length +=1
+#         return self
+    
+#     def removeLoop(self):
+#         if not self.head:
+#             return None
+#         slow = self.head
+#         fast = self.head
+#         while fast and fast.next:
+#             slow = slow.next
+#             fast = fast.next.next
+#             if slow==fast:
+#                 print("loop")
+#                 break
+#         else:
+#             return " no loop"
+        
+#         self.tail.next = None
+#         return self
+        
+# tt = None
+
+
+#20
+#sorted linked list
+# class Node:
+#     def __init__(self,val):
+#         self.val = val
+#         self.next = None
+    
+# class Singly:
+#     def __init__(self,val):
+#         newNode = Node(val)
+#         self.head = newNode
+#         self.tail = self.head
+#         self.length  = 1
+        
+#     def push(self,val):
+#         newNode = Node(val)
+#         if not self.head:
+#             self.head = newNode
+#             self.tail = self.head
+#         else:
+#             self.tail.next = newNode
+#             self.tail = newNode
+#         self.length +=1
+#         return self
+    
+#     def removeSortedDuplicate(self):
+#         if not self.head:
+#             return None
+#         temp = self.head
+#         while temp and temp.next:
+#             if temp.val == temp.next.val:
+#                 temp.next = temp.next.next
+#                 self.length -=1
+#             else:
+#                 temp = temp.next
+#         return self
+    
+#     def removeUnsortedDuplicate(self):
+#         if not self.head:
+#             return None
+#         temp = self.head
+#         prev = None
+#         storeSet = set()
+#         while temp:
+#             if temp.val in storeSet:
+#                 prev.next = temp.next
+#                 self.length-=1
+#             else:
+#                 storeSet.add(temp.val)
+#                 prev = temp
+#             temp = temp.next
+#         self.tail = prev
+#         return self
+    
+# tt = None
+    
+    
+    
+    
+#22
+class Node:
+    def __init__(self,val):
+        self.val = val
+        self.next = None
+
+class Singly:
+    def __init__(self,val):
+        newNode = Node(val)
+        self.head = newNode
+        self.tail = self.head
+        self.length = 1
+        
+    def push(self,val):
+        newNode = Node(val)
+        if not self.head:
+            self.head = newNode
+            self.tail = self.head
+        else:
+            self.tail.next = newNode
+            self.tail = newNode
+        self.length+=1
+        return self
+    
+    def get(self,index):
+        if index<0 or index>=self.length:
+            return None
+        temp = self.head
+        i= 0
+        while i<index:
+            temp = temp.next
+            i+=1
+        return temp
+    
+    
+tt = None
+         
+        
+        
+    
