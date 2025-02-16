@@ -56,6 +56,19 @@ class DoublyLinkedList:
             temp.prev = None
         self.length -= 1
         return temp 
+    
+    def unshift(self,val):
+        newNode = Node(val)
+        if not self.head or self.length ==0:
+            self.head = newNode
+            self.tail = self.head
+        else:
+            newNode.next = self.head
+            self.head.prev = newNode
+            self.head = newNode
+        self.length+=1
+        return self     
+        
         
 tt = None
         
