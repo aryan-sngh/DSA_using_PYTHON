@@ -99,8 +99,17 @@ class DoublyLinkedList:
                 temp = temp.prev
                 i-=1
         return temp
+    
+    def set(self,index,val):
+        temp = self.get(index)
+        if temp:
+            temp.val = val
+            return True
+        else:
+            return False
         
-        
+    
+    
 tt = None
         
         
