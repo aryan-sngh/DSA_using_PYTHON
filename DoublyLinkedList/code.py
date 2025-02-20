@@ -129,8 +129,25 @@ class DoublyLinkedList:
         newNode.prev = before
         newNode.next = after
         after.prev = newNode
+        self.length -=1
         return self
     
+    def remove(self,index):
+        if index == 0:
+            return self.shift()
+        if index == self.length -1:
+            return self.pop()
+        if index<0 or index>=self.length:
+            return None
+        before = self.get(index-1)
+        after = before.next
+        before.next = after.next
+        after.next.prev = before
+        after.next = None
+        after.prev = None
+        self.length-=1
+        return self
+        
     
 tt = None
         
