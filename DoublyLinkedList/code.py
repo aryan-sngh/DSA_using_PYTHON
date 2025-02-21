@@ -129,7 +129,7 @@ class DoublyLinkedList:
         newNode.prev = before
         newNode.next = after
         after.prev = newNode
-        self.length -=1
+        self.length +=1
         return self
     
     def remove(self,index):
@@ -147,9 +147,67 @@ class DoublyLinkedList:
         after.prev = None
         self.length-=1
         return self
-        
     
+    #swap first and last
+    def swapFirstLast(self):
+        if not self.head or self.length == 0 or self.length<2:
+            return None
+        
+        
+        first = self.head
+        last = self.tail
+        temp = None
+        temp = first.val
+        first.val = last.val
+        last.val = temp
+        return self
+        
+    def reverse(self):
+        if not self.head or self.length == 0:
+            return None
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+        next = temp.next
+        back = None
+        i = 0
+        while i<self.length:
+            next = temp.next
+            temp.next = back
+            temp.prev = next
+            back = temp
+            temp = next
+            i+=1
+        return self
+    
+    def detectLoop(self):
+        if not self.head or self.length== 0:
+            return None
+        slow = self.head
+        fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return "loop"
+        else:
+            return None
+        
+    def isPalindrome(self):
+        if not self.head or self.length == 0:
+            return None
+        forwardNode = self.head
+        backwardNode = self.tail
+        i = 0
+        while i<self.length/2:
+            if forwardNode.val != backwardNode.val:
+                return False
+            forwardNode = forwardNode.next
+            backwardNode = backwardNode.prev
+            i+=1
+        return True
 tt = None
+        
         
         
         
