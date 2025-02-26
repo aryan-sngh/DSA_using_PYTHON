@@ -33,13 +33,31 @@ class Stack:
         return temp
     
     def reverseString(self,string):
+        stack = Stack()
         reversedString = ""
         for char in string:
-            self.push(char)
-        while self.length > 0:
-            reversedString+=str(self.pop().val)
+            stack.push(char)
+        while stack.length > 0:
+            reversedString+=str(stack.pop().val)
             
         return reversedString
+    
+    def isBalancedParanthesies(self,s):
+        stack = []        
+        openingBrackets = ['(','{','[']
+        closingBrackets = [')','}',']']
+        for char in s:
+            if char in openingBrackets:
+                stack.append(char)
+            elif char in closingBrackets:
+                if not stack:
+                    return False
+                lastOpenedBracket = stack.pop()
+                matchingOpeningBrakcet = openingBrackets[closingBrackets.index(char)]
+                if matchingOpeningBrakcet != lastOpenedBracket:
+                    return False
+        return len(stack) == 0
+    
             
         
 tt = None
