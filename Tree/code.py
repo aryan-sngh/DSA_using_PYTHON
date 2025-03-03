@@ -31,6 +31,22 @@ class BST:
                     return self
                 else:
                     temp = temp.right 
+                    
+    def find(self,value):
+        if self.root is None:
+            return False
+        temp = self.root
+        while temp:
+            if value <temp.val:
+                temp = temp.left
+            elif value>temp.val:
+                temp= temp.right
+            else:
+                return True
+        else:
+            return False
+            
+                
                 
 tt = None            
 
