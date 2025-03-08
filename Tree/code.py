@@ -1,3 +1,4 @@
+from collections import deque
 class Node:
     def __init__(self,val):
         self.val = val
@@ -45,8 +46,27 @@ class BST:
                 return True
         else:
             return False
-            
+        
+
+    def BSF(self):
+        currentNode = self.root
+        queue = deque()
+        results = []
+        
+        queue.append(currentNode)
+        
+        while queue:
+            currentNode = queue.popleft()
+            results.append(currentNode.val)
+            if currentNode.left:
+                queue.append(currentNode.left)
+            if currentNode.right:
+                queue.append(currentNode.right)
                 
+        return results
+        
+        
+        
                 
 tt = None            
 
