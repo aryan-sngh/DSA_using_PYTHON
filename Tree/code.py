@@ -65,6 +65,18 @@ class BST:
                 
         return results
         
+    def dfsPreOrder(self):
+        results = []
+        
+        def recursive(currentNode):
+            results.append(currentNode.val)
+            if currentNode.left:
+                recursive(currentNode.left)
+            if currentNode.right:
+                recursive(currentNode.right)
+        
+        recursive(self.root)
+        return results
         
         
                 
