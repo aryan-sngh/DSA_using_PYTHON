@@ -77,7 +77,26 @@ class BST:
         
         recursive(self.root)
         return results
+    
+    
+    def dfsPostOrder(self):
         
+        results = []
+        def recursive(currentNode):
+            
+            if currentNode.left:
+                recursive(currentNode.left)
+            if currentNode.right:
+                recursive(currentNode.right)
+            
+            results.append(currentNode.val)
+        
+        
+        recursive(self.root)
+        
+        return results
+        
+    
         
                 
 tt = None            
