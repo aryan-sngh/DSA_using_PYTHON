@@ -42,7 +42,7 @@ class BST:
                 temp = temp.left
             elif value>temp.val:
                 temp= temp.right
-            else:
+            else:       
                 return True
         else:
             return False
@@ -95,6 +95,21 @@ class BST:
         recursive(self.root)
         
         return results
+    
+    def inOrder(self):
+        result = []
+        
+        def recursive(currentNode):
+            if currentNode.left:
+                recursive(currentNode.left)
+            result.append(currentNode.val)
+            if currentNode.right:
+                recursive(currentNode.right)
+                
+        recursive(self.root)
+        
+        return result
+            
         
     
         
