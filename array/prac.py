@@ -50,16 +50,30 @@
 
 #remove given element 
 
-def remove_element(arr,val):
-    i=0 
-    for j in range(len(arr)):
-        if arr[j] != val:
-            arr[i] = arr[j]
-            i+=1
-    return i
+# def remove_element(arr,val):
+#     i=0 
+#     for j in range(len(arr)):
+#         if arr[j] != val:
+#             arr[i] = arr[j]
+#             i+=1
+#     return i
 
 
-arr = [1,2,3,4,5,6,6,2]
-len1 = remove_element(arr,2)
-print(arr[:len1])
+# arr = [1,2,3,4,5,6,6,2]
+# len1 = remove_element(arr,2)
+# print(arr[:len1])
         
+        
+#two sum
+
+def twoSum(arr,target):
+    check = False
+    for i in range(0,len(arr)-1):
+        for j in range(i+1,len(arr)):
+            if arr[i]+arr[j] == target:
+                print(i,j)
+                check = True
+    if not check:
+        print("not found")
+        
+twoSum([1,2,3,4,5,9],7)
