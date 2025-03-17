@@ -77,3 +77,22 @@ def twoSum(arr,target):
         print("not found")
         
 twoSum([1,2,3,4,5,9],7)
+
+
+#another twoSUm
+
+def twoSum2(arr,target):
+    numDict = {}
+    for i in range(len(arr)):
+        num = arr[i]
+        compliment = target-num
+        
+        if compliment in numDict:
+            return numDict[compliment],i
+        numDict[num] = i
+        
+    return []
+
+print(twoSum2([1,2,3,4,5,9],10))
+        
+        
