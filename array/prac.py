@@ -95,4 +95,20 @@ def twoSum2(arr,target):
 
 print(twoSum2([1,2,3,4,5,9],10))
         
-        
+
+#find Duplicate
+def findDuplicate(nums):
+    numDict = {}
+    for num in nums:
+        if num in numDict:
+            numDict[num]+=1
+        else:
+            numDict[num] = 1
+            
+    Duplicate = []
+    for key in numDict:
+        if numDict[key] > 1:
+            Duplicate.append(int(key))
+    return Duplicate
+            
+print(findDuplicate([1,2,3,4,5,5,6,7,6]))
