@@ -76,7 +76,7 @@ def twoSum(arr,target):
     if not check:
         print("not found")
         
-twoSum([1,2,3,4,5,9],7)
+# twoSum([1,2,3,4,5,9],7)
 
 
 #another twoSUm
@@ -93,7 +93,7 @@ def twoSum2(arr,target):
         
     return []
 
-print(twoSum2([1,2,3,4,5,9],10))
+# print(twoSum2([1,2,3,4,5,9],10))
         
 
 #find Duplicate
@@ -111,4 +111,19 @@ def findDuplicate(nums):
             Duplicate.append(int(key))
     return Duplicate
             
-print(findDuplicate([1,2,3,4,5,5,6,7,6]))
+# print(findDuplicate([1,2,3,4,5,5,6,7,6]))
+
+#itemInCommon
+def itemInCommon(arr1,arr2):
+    obj = {}
+    for item in arr1:
+        obj[item] = True
+    
+    for item in arr2:
+        if item in obj:
+            return True
+    return False
+
+print(itemInCommon([1,2,3],[11,5,7]))
+    
+        
