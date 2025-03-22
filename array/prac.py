@@ -124,6 +124,21 @@ def itemInCommon(arr1,arr2):
             return True
     return False
 
-print(itemInCommon([1,2,3],[11,5,7]))
-    
+# print(itemInCommon([1,2,3],[1,5,7]))
+
+#two sum using two pointer approch
+
+def twoSumtpa(arr,target):
+    low = 0
+    high = len(arr)-1
+    while low<high:
+        sum = arr[low] + arr[high]
+        if sum == target:
+            return low,high
+        if sum>target:
+            high -= 1
+        elif sum<target:
+            low +=1 
+        
+print(twoSumtpa([1,2,3,4,5,6,7],9))
         
