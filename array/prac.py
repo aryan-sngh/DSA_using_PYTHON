@@ -111,7 +111,7 @@ def findDuplicate(nums):
             Duplicate.append(int(key))
     return Duplicate
             
-# print(findDuplicate([1,2,3,4,5,5,6,7,6]))
+print(findDuplicate([1,2,3,4,5,5,6,7,6]))
 
 #itemInCommon
 def itemInCommon(arr1,arr2):
@@ -140,5 +140,24 @@ def twoSumtpa(arr,target):
         elif sum<target:
             low +=1 
         
-print(twoSumtpa([1,2,3,4,5,6,7],9))
+# print(twoSumtpa([1,2,3,4,5,6,7],9))
+
+#binarySearch two pointer approach
+
+def binaryseach(arr,target):
+    arr.sort()
+    print(arr)
+    low = 0
+    high = len(arr)-1
+    while low<=high:
+        mid = low+high//2
+        if arr[mid] == target:
+            return mid
+        if arr[mid]>target:
+            high -= 1
+        elif arr[mid]<target:
+            low +=1
+            
+print(binaryseach([4,2,5,1,8,3,2],8))
+            
         
