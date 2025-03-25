@@ -111,7 +111,7 @@ def findDuplicate(nums):
             Duplicate.append(int(key))
     return Duplicate
             
-print(findDuplicate([1,2,3,4,5,5,6,7,6]))
+# print(findDuplicate([1,2,3,4,5,5,6,7,6]))
 
 #itemInCommon
 def itemInCommon(arr1,arr2):
@@ -158,6 +158,28 @@ def binaryseach(arr,target):
         elif arr[mid]<target:
             low +=1
             
-print(binaryseach([4,2,5,1,8,3,2],8))
+# print(binaryseach([4,2,5,1,8,3,2],8))
+
+#binary search using recursion
+
+def bsearch(arr,low,high,target):
+    
+    if low>high:
+        return -1
+    mid = low+(high-low)//2
+    if arr[mid] == target:
+        return mid
+    elif target>arr[mid]:
+        return bsearch(arr,mid+1,high,target)
+    else:
+        return bsearch(arr,low,mid-1,target)
+    
+arr = [1,2,3,4,5,6,7]
+low = 0
+high = len(arr)-1      
+print(bsearch(arr,low,high,6))
+
+            
+        
             
         
