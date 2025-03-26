@@ -166,7 +166,7 @@ def bsearch(arr,low,high,target):
     
     if low>high:
         return -1
-    mid = low+(high-low)//2
+    mid = high+low//2
     if arr[mid] == target:
         return mid
     elif target>arr[mid]:
@@ -174,12 +174,33 @@ def bsearch(arr,low,high,target):
     else:
         return bsearch(arr,low,mid-1,target)
     
-arr = [1,2,3,4,5,6,7]
+arr = [0,1,2,3,4,5,6,7,8]
 low = 0
 high = len(arr)-1      
-print(bsearch(arr,low,high,6))
+# print(bsearch(arr,low,high,6))
 
-            
+
+#fibonici series
+def fib(n):
+    fiba = [0,1]
+    for i in range(2,n+1):
+        x = fiba[i-1] + fiba[i-2]
+        fiba.append(x)
+    for i in fiba:
+        print(i,end=",")    
+        
+# fib(10)
+
+def fib2(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fib2(n-1)+fib2(n-2)
+
+# print(fib2(7))
+
+
         
             
         
