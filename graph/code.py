@@ -9,6 +9,12 @@ class Graph:
             return True
         return False
     
+    def addEgde(self,vertex1,vertex2):
+        if vertex1 in self.adjacencyList and vertex2 in self.adjacencyList:
+            self.adjacencyList[vertex1].append(vertex2)
+            self.adjacencyList[vertex2].append(vertex1)
+            return True
+        return False
     
 tt = None
     
