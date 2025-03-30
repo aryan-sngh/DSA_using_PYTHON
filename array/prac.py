@@ -201,6 +201,16 @@ def fib2(n):
 # print(fib2(7))
 
 
-        
-            
+def findDuplicate2(nums):
+    table = {}
+    for i in nums:
+        if i in table:
+            return True
+        else:
+            table[i] = 1
+    return False
+
+
+print(findDuplicate2([1,2,3,4,4]))            
+
         
