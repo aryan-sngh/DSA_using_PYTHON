@@ -224,7 +224,41 @@ class SinglyLinkedList:
             entry = entry.next
             slow = slow.next
         return slow
+    
+    def isPalindrome(self):
+        list = []
+        current = self.head
+        while current:
+            list.append(current.val)
+            current = current.next
         
+        while len(list)>0:
+            if list[0] != list[-1]:
+                return False
+            list.pop(0)
+            list.pop(-1)
+        return len(list) == 0
+    
+    def reverseList(self):
+        list = []
+        current = self.head
+        while current:
+            list.append(current.val)
+            current = current.next 
+        if len(list) == 0:
+            return []
+        if len(list) ==1:
+            return list
+        
+        reverseList = []
+        while len(list)>2:
+            reverseList.append(list.remove())
+        return reverseList
+
+
+        
+                
+                
     
     
             
