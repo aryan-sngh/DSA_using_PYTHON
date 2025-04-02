@@ -211,6 +211,20 @@ def findDuplicate2(nums):
     return False
 
 
-print(findDuplicate2([1,2,3,4,4]))            
+# print(findDuplicate2([1,2,3,4,4]))            
 
-        
+#removeDuplicate:
+
+def removeDuplicate2(nums):
+    slow = 0
+    fast = slow+1
+    i = 0
+    while i<=len(nums):
+        if nums[slow] != nums[slow+1]:
+            slow = fast
+            fast += 1
+        else:
+            nums.pop(slow)
+        i+= 1
+    return nums
+print(removeDuplicate2([1,2,2,3,3,4,4,4,5]))
