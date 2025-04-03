@@ -227,4 +227,26 @@ def removeDuplicate2(nums):
             nums.pop(slow)
         i+= 1
     return nums
-print(removeDuplicate2([1,2,2,3,3,4,4,4,5]))
+# print(removeDuplicate2([1,2,2,3,3,4,4,4,5]))
+
+def reverse(x):
+    rev = 0
+    og = x
+    if og<0:
+        x = x*(-1)
+
+    while x>0:
+        u = x%10
+        rev = rev*10+u
+        x = x//10
+    
+    if og<0:
+        rev = rev*(-1)
+        
+    if rev < -2**31 or rev > 2**31-1:
+        return 0
+         
+    return rev
+
+
+print(reverse(1534236469))
