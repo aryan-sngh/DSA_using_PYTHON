@@ -249,4 +249,15 @@ def reverse(x):
     return rev
 
 
-print(reverse(1534236469))
+# print(reverse(1534236469))
+
+#marge two sorted array
+def merge(arr1,arr2):
+    for i in arr2:
+        arr1.append(i)
+    
+    list3 = sorted(arr1)
+    
+    return list3
+
+print(merge([1,2,3,4,5,6],[1,2,3,4,5,6,7,8]))
