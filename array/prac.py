@@ -277,5 +277,20 @@ def max_subarray(nums,k):
     
     return max_sum
 
-print(max_subarray([2, 1, 5, 1, 3, 2],3))
+# print(max_subarray([2, 1, 5, 1, 3, 2],3))
+
+#average of max subarray:
+
+def max_average(nums,k):
+    currentSum = sum(nums[:k])
+    maxSum = currentSum
+    
+    for i in range(k,len(nums)):
+        currentSum = currentSum -nums[i-k] + nums[i]
+        maxSum = max(currentSum,maxSum)
+        
+    return maxSum/k
+nums = [1,12,-5,-6,50,3] 
+k = 4
+print(max_average(nums,k))        
     
