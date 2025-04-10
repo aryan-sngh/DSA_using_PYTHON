@@ -290,7 +290,33 @@ def max_average(nums,k):
         maxSum = max(currentSum,maxSum)
         
     return maxSum/k
-nums = [1,12,-5,-6,50,3] 
-k = 4
-print(max_average(nums,k))        
-    
+# nums = [1,12,-5,-6,50,3] 
+# k = 4
+# print(max_average(nums,k))        
+     
+
+#move zeros
+def moveZeros(nums):
+    l = 0
+    for r in range(0,len(nums)):
+        if nums[r] != 0:
+            temp = nums[l]
+            nums[l] = nums[r]
+            nums[r] = temp
+            
+            l+=1
+    return nums
+
+
+print(moveZeros([0,0,1,0,3,12]))
+
+#or
+def moveZeroes2(nums):
+    l = 0
+    for _ in range(0,len(nums)):
+        if nums[l] == 0:
+            nums.append(nums.pop(l))
+        if nums[l]!= 0:
+            l+=1
+    return nums
+        
