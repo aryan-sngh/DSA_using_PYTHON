@@ -308,7 +308,7 @@ def moveZeros(nums):
     return nums
 
 
-print(moveZeros([0,0,1,0,3,12]))
+# print(moveZeros([0,0,1,0,3,12]))
 
 #or
 def moveZeroes2(nums):
@@ -319,4 +319,34 @@ def moveZeroes2(nums):
         if nums[l]!= 0:
             l+=1
     return nums
-        
+
+#reverse string in list:
+
+def reverseString(s):
+    reverseText = []
+    while len(s)>0:
+        reverseText.append(s.pop())
+    
+    return reverseText
+
+#or
+def reverseString2(s):
+    for _ in range(len(s)):
+        s.append(s.pop())
+    return s
+ 
+#or
+def reverseString3(s):
+    l = 0
+    r = len(s)-1
+    while l<=r:
+        temp = s[l]
+        s[l] = s[r]
+        s[r] = temp
+        l+=1
+        r-=1
+    return s
+   
+s = ["A","R","Y","A","N"]
+print(reverseString3(s))
+
