@@ -348,5 +348,24 @@ def reverseString3(s):
     return s
    
 s = ["A","R","Y","A","N"]
-print(reverseString3(s))
+# print(reverseString3(s))
 
+#square of a Sorted Array
+def sortedSquare(nums):
+    l = 0
+    while l<len(nums):
+        nums[l] = nums[l]**2
+        l+=1
+    return sorted(nums)
+
+#or
+def sortedSquare2(nums):
+    # for i in range(len(nums)):
+    #     nums[i] = nums[i]**2
+    
+    # return sorted(nums)
+        
+        
+
+nums = [-4,-1,0,3,10]
+print(sortedSquare(nums))
