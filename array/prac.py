@@ -360,12 +360,28 @@ def sortedSquare(nums):
 
 #or
 def sortedSquare2(nums):
-    # for i in range(len(nums)):
-    #     nums[i] = nums[i]**2
+    for i in range(len(nums)):
+        nums[i] = nums[i]**2
     
-    # return sorted(nums)
+    return sorted(nums)
         
         
 
 nums = [-4,-1,0,3,10]
-print(sortedSquare(nums))
+# print(sortedSquare(nums))
+
+def twoSum3(numbers, target):
+        
+        l = 0
+        r = len(numbers)-1
+        while l<r:
+            sum = numbers[l]+numbers[r]
+            if sum == target:
+                return [l+1,r+1]
+            if sum>target:
+                r-=1
+            else:
+                l+=1
+                
+                
+print(twoSum3([2,7,11,15],9))    
