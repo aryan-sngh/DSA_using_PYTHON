@@ -382,6 +382,35 @@ def twoSum3(numbers, target):
                 r-=1
             else:
                 l+=1
+        
                 
-                
-print(twoSum3([2,7,11,15],9))    
+# print(twoSum3([2,7,11,15],9))    
+
+#roman to integer
+def romanToint(s):
+    dict = {
+        "I":1,
+        "V":5,
+        "X":10,
+        "L":50,
+        "C":100,
+        "D":500,
+        "M":1000
+    }
+    
+    left = 0
+    result = 0
+    n = len(s)
+    
+    while left<n:
+        if left+1<n and dict[s[left]]<dict[s[left+1]]:
+            result+=dict[s[left+1]]-dict[s[left]]
+            left+=2
+        else:
+            result+=dict[s[left]]
+            left+=1
+            
+    return result
+
+print(romanToint("MCMXCIV"))
+    
