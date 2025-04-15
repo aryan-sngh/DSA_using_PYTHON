@@ -412,5 +412,24 @@ def romanToint(s):
             
     return result
 
-print(romanToint("MCMXCIV"))
-    
+# print(romanToint("MCMXCIV"))
+
+
+def singleNumber(nums):
+    dict = {}
+    for num in nums:
+        if num in dict:
+            dict[num]+=1
+        else:
+            dict[num] = 1
+            
+    for key in dict:
+        if dict[key] == 1:
+            return key
+
+
+# Input: nums = [2,2,1]
+
+# Output: 1
+
+print(singleNumber([4,1,2,1,2]))
