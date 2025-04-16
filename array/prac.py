@@ -432,4 +432,28 @@ def singleNumber(nums):
 
 # Output: 1
 
-print(singleNumber([4,1,2,1,2]))
+# print(singleNumber([4,1,2,1,2])
+
+#Majority Element
+
+def majorityElement(nums):
+    dict = {}
+    maxcount = 0
+    for i in nums:
+        if i in dict:
+            dict[i]+=1
+        else:
+            dict[i] = 1
+    # print(dict)        
+    # for key in dict:
+    #     if dict[key]>max:
+    #         max = dict[key]
+    # for key,value in dict.items():
+    #     if value == max:
+    #         return(key)
+    maxcount = max(dict.values())
+    for key,value in dict.items():
+        if value == maxcount:
+            return key
+
+print(majorityElement([2,2,1,1,1,2,2]))
