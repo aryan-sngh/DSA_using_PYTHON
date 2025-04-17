@@ -455,5 +455,37 @@ def majorityElement(nums):
     for key,value in dict.items():
         if value == maxcount:
             return key
+# print(majorityElement([2,2,1,1,1,2,2]))
 
-print(majorityElement([2,2,1,1,1,2,2]))
+
+#3 sum 
+
+def sum3(nums):
+    nums.sort()
+    res = []
+    
+    for i in range(len(nums)):
+        if i>0 and nums[i] == nums[i-1]:
+            continue
+        left = i+1
+        right = len(nums)-1
+        
+        while left<right:
+            sum = nums[i]+nums[left]+nums[right]
+            if sum>0:
+                right-=1
+            if sum<0:
+                left+=1
+            if sum == 0:
+                res.append([nums[i],nums[left],nums[right]])
+                left+=1
+                if nums[left] == nums[left-1] and left<right:
+                    left+=1
+                
+                                  
+            
+    return res 
+    
+    
+print(sum3([0,0,0,0]))
+        
