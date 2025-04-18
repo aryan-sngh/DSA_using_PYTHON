@@ -487,5 +487,16 @@ def sum3(nums):
     return res 
     
     
-print(sum3([0,0,0,0]))
+# print(sum3([0,0,0,0]))
+
+#remove elements:
+def removeElement(nums,val):
+    k = 0
+    for num in nums:
+        if num != val:
+            nums[k] = num
+            k+=1
+    return k,nums
+
+print(removeElement([3,2,2,3],3))
         
