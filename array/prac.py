@@ -511,7 +511,13 @@ def searchInsert(nums, target):
     return index
         
         
-print(searchInsert([1,3,5,6],5))
+# print(searchInsert([1,3,5,6],5))
             
 
-        
+#missing number
+def missingNumber(nums):
+    for i in range(len(nums)):
+        if i not in nums:
+            return i
+    
+print(missingNumber([9,6,4,2,3,5,7,0,1]))
