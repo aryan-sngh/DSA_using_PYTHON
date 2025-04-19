@@ -498,5 +498,20 @@ def removeElement(nums,val):
             k+=1
     return k,nums
 
-print(removeElement([3,2,2,3],3))
+# print(removeElement([3,2,2,3],3))
+
+
+#search insert position
+def searchInsert(nums, target):
+    for i in range(len(nums)):
+        if nums[i] == target:
+            return i
+        if target>nums[i]:
+            index = i+1
+    return index
+        
+        
+print(searchInsert([1,3,5,6],5))
+            
+
         
