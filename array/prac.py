@@ -520,4 +520,19 @@ def missingNumber(nums):
         if i not in nums:
             return i
     
-print(missingNumber([9,6,4,2,3,5,7,0,1]))
+# print(missingNumber([9,6,4,2,3,5,7,0,1]))
+
+
+#third max
+def thirdMax(l):
+    l = list(set(l))
+    l.sort(reverse=True)
+    
+    if len(l)>=3:
+        return l[2]
+    else:
+        return l[0]
+    
+            
+            
+print(thirdMax([1,1,2]))
