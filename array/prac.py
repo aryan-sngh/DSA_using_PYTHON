@@ -535,4 +535,41 @@ def thirdMax(l):
     
             
             
-print(thirdMax([1,1,2]))
+# print(thirdMax([1,1,2]))
+
+# Count Largest Group
+def countLargestGroup(n):
+    def calDigitSum(n):
+        dsum = 0
+        while n>0:
+            u = n%10
+            dsum+=u
+            n = n//10
+        return dsum
+
+    dit = {}
+    for i in range(1,n+1):
+        digitSum = calDigitSum(i)
+        if digitSum in dit:
+            dit[digitSum]+=1
+        else:
+            dit[digitSum] = 1
+    maxSize = max(dit.values())    
+    
+    
+    count = 0
+    for size in dit.values():
+        if size == maxSize:
+            count+=1
+            
+    
+
+    
+    return count
+
+print(countLargestGroup(13))
+
+        
+    
+        
+    
