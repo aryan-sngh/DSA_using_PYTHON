@@ -1,3 +1,4 @@
+from collections import deque
 # #longestString
 
 # def longestString(arr):
@@ -567,7 +568,25 @@ def countLargestGroup(n):
     
     return count
 
-print(countLargestGroup(13))
+# print(countLargestGroup(13))
+
+#duplicate number II
+
+def containNearbyDuplicate(nums,k):
+    dict = {}
+    for i in nums:
+        if i in dict:
+            dict[i] += 1
+        else:
+            dict[i] = 1
+    list = []        
+    for equal in dict:
+        if dict[equal] == 2:
+            list.append(equal)
+            
+    
+print(containNearbyDuplicate([1,2,3,1,2,3],2))
+
 
         
     
