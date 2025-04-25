@@ -574,18 +574,15 @@ def countLargestGroup(n):
 
 def containNearbyDuplicate(nums,k):
     dict = {}
-    for i in nums:
-        if i in dict:
-            dict[i] += 1
-        else:
-            dict[i] = 1
-    list = []        
-    for equal in dict:
-        if dict[equal] == 2:
-            list.append(equal)
+    for i in range(len(nums)):
+        num = nums[i]
+        if num in dict and i - dict[num] <= k:
+            return True
+        dict[num] = i
+    return False
             
     
-print(containNearbyDuplicate([1,2,3,1,2,3],2))
+print(containNearbyDuplicate([1,0,1,1],1))
 
 
         
