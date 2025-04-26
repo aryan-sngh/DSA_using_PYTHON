@@ -574,8 +574,7 @@ def countLargestGroup(n):
 
 def containNearbyDuplicate(nums,k):
     dict = {}
-    for i in range(len(nums)):
-        num = nums[i]
+    for i,num in enumerate(nums):
         if num in dict and i - dict[num] <= k:
             return True
         dict[num] = i
@@ -583,6 +582,37 @@ def containNearbyDuplicate(nums,k):
             
     
 print(containNearbyDuplicate([1,0,1,1],1))
+
+# Next Greater Element I
+# def nextGreaterElement(num1,num2):
+#     list = []
+#     for i in range(len(num1)):
+#         nextElemnt = num2.index(num1[i])+1
+#         if nextElemnt<len(num2):
+#             if num1[i] in num2 and num1[i]<num2[nextElemnt]:
+#                 list.append(num2[nextElemnt])
+#             else:
+#                 list.append(-1)
+#         else:
+#             list.append(-1)
+            
+#     return list
+
+# print(nextGreaterElement([1,3,5,2,4],[6,5,4,3,2,1,7]))
+
+
+
+
+            
+            
+            
+            
+            
+            
+        
+        
+        
+
 
 
         
