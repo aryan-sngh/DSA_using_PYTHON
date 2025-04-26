@@ -584,21 +584,20 @@ def containNearbyDuplicate(nums,k):
 print(containNearbyDuplicate([1,0,1,1],1))
 
 # Next Greater Element I
-# def nextGreaterElement(num1,num2):
-#     list = []
-#     for i in range(len(num1)):
-#         nextElemnt = num2.index(num1[i])+1
-#         if nextElemnt<len(num2):
-#             if num1[i] in num2 and num1[i]<num2[nextElemnt]:
-#                 list.append(num2[nextElemnt])
-#             else:
-#                 list.append(-1)
-#         else:
-#             list.append(-1)
-            
-#     return list
+def nextGreaterElement(num1,num2):
+    list = []
+    for num in num1:
+        nextElemnt = num2.index(num)+1
+        found = - 1
+        for i in range(nextElemnt,len(num2)):
+            if num2[i]>num:
+                found = num2[i]
+                break
+        list.append(found)    
+    
+    return list
 
-# print(nextGreaterElement([1,3,5,2,4],[6,5,4,3,2,1,7]))
+print(nextGreaterElement([1,3,5,2,4],[6,5,4,3,2,1,7]))
 
 
 
