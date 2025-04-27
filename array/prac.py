@@ -581,7 +581,7 @@ def containNearbyDuplicate(nums,k):
     return False
             
     
-print(containNearbyDuplicate([1,0,1,1],1))
+# print(containNearbyDuplicate([1,0,1,1],1))
 
 # Next Greater Element I
 def nextGreaterElement(num1,num2):
@@ -597,7 +597,23 @@ def nextGreaterElement(num1,num2):
     
     return list
 
-print(nextGreaterElement([1,3,5,2,4],[6,5,4,3,2,1,7]))
+# print(nextGreaterElement([1,3,5,2,4],[6,5,4,3,2,1,7]))
+
+#duplicate zeros
+def duplicateZeros(arr):
+    i = 0
+    while i<len(arr):
+        if arr[i] == 0:
+            arr.insert(i+1,0)
+            arr.pop()
+            i+=2
+        else:
+            i+=1
+        
+    return arr
+print(duplicateZeros([0,4,1,0,0,8,0,0,3]))
+            
+    
 
 
 
