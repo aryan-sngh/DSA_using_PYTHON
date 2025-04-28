@@ -611,11 +611,20 @@ def duplicateZeros(arr):
             i+=1
         
     return arr
-print(duplicateZeros([0,4,1,0,0,8,0,0,3]))
-            
+# print(duplicateZeros([0,4,1,0,0,8,0,0,3]))
+
+#3392. Count Subarrays of Length Three With a Condition
+def countSubarray(nums):
+    count = 0
+    # while i<len(nums)-2:
+    for i in range(len(nums)-2):
+        if nums[i]+nums[i+2] == nums[i+1]/2:
+            count+=1
+    return count
     
 
 
+print(countSubarray([2,-7,-6]))
 
 
             
