@@ -624,7 +624,16 @@ def countSubarray(nums):
     
 
 
-print(countSubarray([2,-7,-6]))
+# print(countSubarray([2,-7,-6]))
+
+#Intersection of Two Arrays
+def intersection(num1,num2):
+    n1 = set(num1)
+    n2 = set(num2)
+    
+    common = n1 & n2
+    
+    return list(common)
 
 
             
