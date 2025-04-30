@@ -636,6 +636,18 @@ def intersection(num1,num2):
     return list(common)
 
 
+
+def intersect(nums1, nums2):
+    result = []
+    for i in nums1:
+        if i in nums2:
+            result.append(i)
+            nums2.remove(i)
+    return result
+            
+print(intersect([1,2,2,1],[2,2]))
+
+
             
             
             
