@@ -647,8 +647,21 @@ def intersect(nums1, nums2):
             
 print(intersect([1,2,2,1],[2,2]))
 
-
+def common(num1,num2):
+    s1 = set(num1)
+    s2 = set(num2)
+    
+    common= list(s1 & s2)
+    if common:
+        return min(common)
+    else:
+        return -1
+    
             
+    
+
+    
+                    
             
             
             
