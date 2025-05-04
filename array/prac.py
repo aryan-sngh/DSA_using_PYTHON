@@ -657,7 +657,18 @@ def common(num1,num2):
     else:
         return -1
     
+def findDisappearedNumbers(nums):
+    result = []
+    l = len(nums)
+    sett = set(nums)
+    for i in range(1,l+1):
+        if i not in sett:
+            result.append(i)
+    return result
+
+# Checking if i in num_set is much faster (average O(1) time) than checking if i in nums (which takes O(n) time).
             
+              
     
 
     
