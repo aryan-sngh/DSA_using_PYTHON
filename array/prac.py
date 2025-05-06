@@ -645,7 +645,7 @@ def intersect(nums1, nums2):
             nums2.remove(i)
     return result
             
-print(intersect([1,2,2,1],[2,2]))
+# print(intersect([1,2,2,1],[2,2]))
 
 def common(num1,num2):
     s1 = set(num1)
@@ -667,9 +667,17 @@ def findDisappearedNumbers(nums):
     return result
 
 # Checking if i in num_set is much faster (average O(1) time) than checking if i in nums (which takes O(n) time).
-            
-              
+def findDifference(nums1, nums2):
+        
+    l1 = set(nums1)
+    l2 = set(nums2)
+    ans0 = list(l1-l2)
+    ans1 = list(l2-l1)
+
+    return [ans0,ans1]
     
+
+print(findDifference([1,2,3],[2,4,6]))
 
     
                     
