@@ -679,6 +679,8 @@ def findDifference(nums1, nums2):
 
 print(findDifference([1,2,3],[2,4,6]))
 
+#ahh shit here we go again
+
     
                     
             
