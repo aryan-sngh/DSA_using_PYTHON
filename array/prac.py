@@ -677,10 +677,25 @@ def findDifference(nums1, nums2):
     return [ans0,ans1]
     
 
-print(findDifference([1,2,3],[2,4,6]))
+# print(findDifference([1,2,3],[2,4,6]))
 
 #ahh shit here we go again
+# Three Consecutive Odds
 
+def threeConsecutiveOdd(arr):
+    for i in range(len(arr)-2):
+        if arr[i]%2!=0:
+            if arr[i+1]%2!=0:
+                if arr[i+2]%2!=0:
+                    return True
+    else:
+        return False
+        
+print(threeConsecutiveOdd([1,1,1]))
+        
+        
+        
+    
     
                     
             
