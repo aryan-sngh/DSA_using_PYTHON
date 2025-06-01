@@ -691,10 +691,26 @@ def threeConsecutiveOdd(arr):
     else:
         return False
         
-print(threeConsecutiveOdd([1,1,1]))
+# print(threeConsecutiveOdd([1,1,1]))
+
+#Max Consecutive Ones
+def maxConsecutiveOnes(arr):
+    count = 0
+    maxcount = 0
+    for i in arr:
+        if i == 1:
+            count +=1
+            maxcount = max(maxcount,count)
+        else:
+            count = 0
+    return maxcount
+            
+        
+
+print(maxConsecutiveOnes([1,0,1,1,0,1]))
         
         
-        
+         
     
     
                     
