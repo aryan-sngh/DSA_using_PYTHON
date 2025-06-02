@@ -707,7 +707,23 @@ def maxConsecutiveOnes(arr):
             
         
 
-print(maxConsecutiveOnes([1,0,1,1,0,1]))
+# print(maxConsecutiveOnes([1,0,1,1,0,1]))
+
+# Plus One
+def plusOne(arr):
+    l = []
+    num = 0
+    for i in arr:
+        num = num*10+i
+    num=num+1
+    while num>0:
+        u = num%10
+        l.append(u)
+        num = num//10
+    return l[::-1]
+
+print(plusOne([9]))
+
         
         
          
