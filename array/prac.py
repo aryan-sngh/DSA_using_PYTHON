@@ -736,15 +736,14 @@ def plusOne(arr):
 # print(margedSortedArray([1,2,3,0,0,0],3,[2,5,6],3))
     
 
-valid anagram
+# valid anagram
 def validAnagram(s,t):
+    if len(s)!=len(t):
+        return False
     for i in s:
-        if i in t:
-            t = t.replace(i,"")
-            continue
-        else:
+        if s.count(i) != t.count(i):
             return False
-    return True
+    return False
 
 print(validAnagram("aacc","ccac"))
 
