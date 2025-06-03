@@ -722,14 +722,33 @@ def plusOne(arr):
         num = num//10
     return l[::-1]
 
-print(plusOne([9]))
+# print(plusOne([9]))
 
-        
-        
-         
+
+# Merge Sorted Array
+# def margedSortedArray(nums1,m,nums2,n):
+#     nums1 = nums1[:m]
+#     nums2 = nums2[:n]
+#     l = nums1+nums2    -------------------------------------->>>>>>>>>>>>>LATER
+#     l.sort()
+#     return l
+
+# print(margedSortedArray([1,2,3,0,0,0],3,[2,5,6],3))
     
-    
-                    
+
+valid anagram
+def validAnagram(s,t):
+    for i in s:
+        if i in t:
+            t = t.replace(i,"")
+            continue
+        else:
+            return False
+    return True
+
+print(validAnagram("aacc","ccac"))
+
+
             
             
             
