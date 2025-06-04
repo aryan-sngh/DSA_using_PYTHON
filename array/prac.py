@@ -745,7 +745,21 @@ def validAnagram(s,t):
             return False
     return False
 
-print(validAnagram("aacc","ccac"))
+# print(validAnagram("aacc","ccac"))
+import re
+#valid palindrome 
+def valildPalindrome(s):
+    # temp = s.replace(" ","")
+    s = re.sub(r"[,:\'\".@#_{}()--*$!^+%|?><`~;\\]", "", s)
+    s = (s.replace(" ","").replace("[","").replace("]","")).lower()
+    reverse = s[::-1]
+    if reverse == s:
+        return True
+    else:
+        return False
+
+
+print(valildPalindrome("A man, a plan, a canal: Panama"))
 
 
             
