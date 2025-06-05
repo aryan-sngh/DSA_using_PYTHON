@@ -759,7 +759,17 @@ def valildPalindrome(s):
         return False
 
 
-print(valildPalindrome("A man, a plan, a canal: Panama"))
+# print(valildPalindrome("A man, a plan, a canal: Panama"))
+
+# Length of Last Word
+def lengthOfLastWord(s):
+    words = s.split()   
+    return len(words[-1])
+            
+    
+    
+    
+print(lengthOfLastWord("   fly me   to   the moon  "))
 
 
             
