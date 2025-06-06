@@ -769,9 +769,34 @@ def lengthOfLastWord(s):
     
     
     
-print(lengthOfLastWord("   fly me   to   the moon  "))
+# print(lengthOfLastWord("   fly me   to   the moon  "))
+
+# Find the Difference
+# def findDifference(s,t):
+    
+
+# print(findDifference("abcd","abcde"))
 
 
+
+#finduniquecharacterinaString
+def firstUniqueChar(s):
+    d = {}
+    for i in s:
+        if i in d:
+            d[i]+=1
+        else:
+            d[i]=1
+    
+    for i in range(len(s)):
+        if d[s[i]] == 1:
+            return i
+    return -1
+            
+    
+    
+    
+print(firstUniqueChar("loveleetcode"))
             
             
             
