@@ -792,11 +792,8 @@ def firstUniqueChar(s):
         if d[s[i]] == 1:
             return i
     return -1
-            
     
-    
-    
-print(firstUniqueChar("loveleetcode"))
+# print(firstUniqueChar("loveleetcode"))
             
             
             
