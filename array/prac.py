@@ -794,6 +794,19 @@ def firstUniqueChar(s):
     return -1
     
 # print(firstUniqueChar("loveleetcode"))
+
+# Find the Index of the First Occurrence in a String
+
+def strStr(h,s):
+    # if s in h:
+    #     return h.index(s[0])
+    # return -1
+
+    if s in h:
+        return h.index(s)
+    else:
+        return -1
+print(strStr("mississippi","issip"))
             
             
             
