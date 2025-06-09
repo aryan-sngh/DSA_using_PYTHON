@@ -806,7 +806,22 @@ def strStr(h,s):
         return h.index(s)
     else:
         return -1
-print(strStr("mississippi","issip"))
+# print(strStr("mississippi","issip"))
+
+# 392. Is Subsequence
+def isSubsequence(s,t):
+    j = 0
+    for i in t:
+        if j<len(s) and i==s[j] :
+            j+=1
+            
+    
+    return j == len(s)     
+    
+    
+
+
+print(isSubsequence("axc","ahbgdc"))
             
             
             
