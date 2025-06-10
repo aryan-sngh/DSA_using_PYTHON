@@ -821,7 +821,37 @@ def isSubsequence(s,t):
     
 
 
-print(isSubsequence("axc","ahbgdc"))
+# print(isSubsequence("axc","ahbgdc"))
+
+
+def maxDifference(s):
+    d = {}
+    ev = 0
+    od = 0
+    for i in s:
+        if i in d and s.index(i)%2!=0:
+            d[i]+=1
+        elif i in d and s.index(i)%2==0:
+            d[i]+=1
+        else:
+            d[i]=1
+    for key in d:
+        if d[key] %2==0:
+            if d[key]>ev:
+                ev = d[key]
+        else:
+            if d[key]>od:
+                od = d[key]
+            
+        
+        
+    
+    return od-ev
+    
+        
+
+
+print(maxDifference("abcabcab"))
             
             
             
