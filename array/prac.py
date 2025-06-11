@@ -825,32 +825,44 @@ def isSubsequence(s,t):
 
 
 def maxDifference(s):
+    # d = {}
+    # ev = 0
+    # od = 0
+    # for i in s:
+    #     if i in d and s.index(i)%2!=0:
+    #         d[i]+=1
+    #     elif i in d and s.index(i)%2==0:
+    #         d[i]+=1
+    #     else:
+    #         d[i]=1
+    # for key in d:
+    #     if d[key] %2==0:
+    #         if d[key]>ev:
+    #             ev = d[key]
+    #     else:
+    #         if d[key]>od:
+    #             od = d[key]
+           
     d = {}
-    ev = 0
     od = 0
+    ev = float("inf")
+    found = False
     for i in s:
-        if i in d and s.index(i)%2!=0:
-            d[i]+=1
-        elif i in d and s.index(i)%2==0:
+        if i in d:
             d[i]+=1
         else:
             d[i]=1
-    for key in d:
-        if d[key] %2==0:
-            if d[key]>ev:
-                ev = d[key]
+    for count in d.values():
+        if count%2==0:
+            ev = min(ev,count)
+            found = True
         else:
-            if d[key]>od:
-                od = d[key]
+            od = max(od,count)   
+     
             
-        
-        
-    
+    if not found:
+        return od
     return od-ev
-    
-        
-
-
 print(maxDifference("abcabcab"))
             
             
