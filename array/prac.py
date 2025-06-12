@@ -863,7 +863,43 @@ def maxDifference(s):
     if not found:
         return od
     return od-ev
-print(maxDifference("abcabcab"))
+# print(maxDifference("abcabcab"))
+
+
+#205. Isomorphic Strings
+def isIsomorphic(s,t):
+    if len(s)!=len(t):
+        return False
+
+    m_s_t = {}
+    m_t_s = {}
+    
+    for i in range(len(s)):
+        Ds = s[i]
+        Dt = t[i]
+        if Ds in m_s_t:
+            continue
+        else:
+            m_s_t[Ds]=Dt
+        if Dt in m_t_s:
+            continue
+        else:
+            m_t_s[Dt]=Ds
+            
+
+
+    return len(m_s_t)==len(m_t_s)
+        
+
+print(isIsomorphic("foo","bar"))
+
+
+        
+            
+    
+        
+    
+    
             
             
             
