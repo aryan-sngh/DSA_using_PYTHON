@@ -875,23 +875,39 @@ def isIsomorphic(s,t):
     m_t_s = {}
     
     for i in range(len(s)):
-        Ds = s[i]
-        Dt = t[i]
-        if Ds in m_s_t:
-            continue
-        else:
-            m_s_t[Ds]=Dt
-        if Dt in m_t_s:
-            continue
-        else:
-            m_t_s[Dt]=Ds
-            
-
-
-    return len(m_s_t)==len(m_t_s)
+        s_char = s[i]
+        t_char = t[i]
         
+        if s_char not in m_s_t:
+            m_s_t[s_char] = i
+        if t_char not in m_t_s:
+            m_t_s[t_char] = i
+        if m_s_t[s_char]!=m_t_s[t_char]:
+            return False
+        
+    return True
+# print(isIsomorphic("foo","bar"))
 
-print(isIsomorphic("foo","bar"))
+def reverseVowels(s):
+    og = s
+    vowels = ['a','A','e','E','i','I','o','O','u','U']
+    str = ""
+    for i in s:
+        if i in vowels:
+            str+=i
+    str = str[::-1]
+    index = 0
+    result = ""
+    for i in og:
+        if i in vowels:
+            result+=str[index]
+            index+=1 
+        else:
+            result+=i
+    
+    return result
+
+print(reverseVowels("IceCreAm"))
 
 
         
