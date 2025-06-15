@@ -907,7 +907,23 @@ def reverseVowels(s):
     
     return result
 
-print(reverseVowels("IceCreAm"))
+# print(reverseVowels("IceCreAm"))
+
+from collections import Counter
+# 383. Ransom Note
+def canConduct(ransomNote,magaine):
+    count = 0
+    for i in ransomNote:
+        if i in magaine:
+            count+=1
+            magaine = magaine.replace(i,"",1)
+    return count == len(ransomNote)
+
+print(canConduct("a","b"))
+        
+    
+    
+        
 
 
         
