@@ -919,7 +919,28 @@ def canConduct(ransomNote,magaine):
             magaine = magaine.replace(i,"",1)
     return count == len(ransomNote)
 
-print(canConduct("a","b"))
+# print(canConduct("a","b"))
+
+
+# 2016. Maximum Difference Between Increasing Elements
+def maximumDifference(nums):
+    min_value = nums[0]
+    max_diff = -1
+    for i in range(1,len(nums)):
+        if nums[i]>min_value:
+            max_diff = max(max_diff,nums[i]-min_value)      
+        else:
+            min_value = nums[i]
+            
+    
+    return max_diff
+    
+        
+    
+    
+    
+print(maximumDifference([7,1,5,4])) 
+    
         
     
     
