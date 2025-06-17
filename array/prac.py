@@ -938,8 +938,16 @@ def maximumDifference(nums):
 
 # 415. Add Strings
 def addString(num1,num2):
-    
-
+    def strToNum(s):
+        num = 0
+        for ch in s:
+            digit = ord(ch)-ord('0')
+            num = num*10+digit
+            
+        return num
+    num1 = strToNum(num1)
+    num2 = strToNum(num2)
+    return str(num1+num2)
 
 print(addString("123","10"))
 
