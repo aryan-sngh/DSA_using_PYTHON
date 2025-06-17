@@ -934,17 +934,14 @@ def maximumDifference(nums):
             
     
     return max_diff
+# print(maximumDifference([7,1,5,4])) 
+
+# 415. Add Strings
+def addString(num1,num2):
     
-        
-    
-    
-    
-print(maximumDifference([7,1,5,4])) 
-    
-        
-    
-    
-        
+
+
+print(addString("123","10"))
 
 
         
