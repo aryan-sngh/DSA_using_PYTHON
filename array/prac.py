@@ -949,7 +949,15 @@ def addString(num1,num2):
     num2 = strToNum(num2)
     return str(num1+num2)
 
-print(addString("123","10"))
+# print(addString("123","10"))
+
+# 520. Detect Capital
+def detectCapital(word):
+    return word.isupper()
+
+print(detectCapital("UaA"))
+
+
 
 
         
