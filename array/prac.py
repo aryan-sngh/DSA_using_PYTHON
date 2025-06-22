@@ -955,7 +955,23 @@ def addString(num1,num2):
 def detectCapital(word):
     return word.isupper()
 
-print(detectCapital("UaA"))
+# print(detectCapital("UaA"))
+
+# 2129. Capitalize the Title
+def capitalizeTitle(title):
+    l = title.split()
+    t = ""
+    for i in l:
+        if len(i)<=2:
+            i = i.lower()
+        else:
+            i = i.capitalize()
+        t+=i+" "
+    
+    return t.strip()
+        
+
+print(capitalizeTitle("capiTalIze tHe titLe"))
 
 
 
