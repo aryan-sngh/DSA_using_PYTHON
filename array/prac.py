@@ -971,8 +971,22 @@ def capitalizeTitle(title):
     return t.strip()
         
 
-print(capitalizeTitle("capiTalIze tHe titLe"))
+# print(capitalizeTitle("capiTalIze tHe titLe"))
 
+
+# 434. Number of Segments in a String
+
+def countSegment(s):
+    # count = 1
+    # for i in s:
+    #     if i == " ":
+    #         count+=1
+    # return count
+    l = s.split()
+    # return l
+    return len(l)
+print(countSegment("Hello, my name is John"))
+        
 
 
 
