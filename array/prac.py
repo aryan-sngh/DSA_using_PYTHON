@@ -985,8 +985,33 @@ def countSegment(s):
     l = s.split()
     # return l
     return len(l)
-print(countSegment("Hello, my name is John"))
-        
+# print(countSegment("Hello, my name is John"))
+
+
+def numberOfSpecialChars(words):
+    count = 0
+    w = set(words.lower())
+    for i in w:
+        if i in words and i.upper() in words:
+            count+=1
+    return count
+    
+
+# print(numberOfSpecialChars("abBCab")
+    
+
+# 557. Reverse Words in a String III
+
+def reverseWords(s):
+    s = s.split()
+    result = ""
+    for i in s:
+        i = i[::-1]
+        result += i+" "
+    return result.strip()
+    
+    
+print(reverseWords("Let's take LeetCode contest"))
 
 
 
