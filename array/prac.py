@@ -1011,7 +1011,29 @@ def reverseWords(s):
     return result.strip()
     
     
-print(reverseWords("Let's take LeetCode contest"))
+# print(reverseWords("Let's take LeetCode contest"))
+
+def countCharacters(words,chars):
+    count = 0
+    final= 0
+    for i in words:
+        for j in i:
+            if j in chars:
+                count+=1
+        if count == len(i):
+            final+=count
+        count = 0
+                
+                
+    return final
+    
+
+def greatestLetter(s):
+    for i in range(len(s)):
+        if s[i] == s[i+1].swapcase():
+            return s[i].upper()
+        
+print(greatestLetter("arRAzFif"))
 
 
 
