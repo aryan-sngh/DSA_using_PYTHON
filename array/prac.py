@@ -1029,9 +1029,12 @@ def countCharacters(words,chars):
     
 
 def greatestLetter(s):
-    for i in range(len(s)):
-        if s[i] == s[i+1].swapcase():
-            return s[i].upper()
+    letters = set(s)
+    for i in reversed("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
+        if i in letters and i.lower() in letters:
+            return i
+    return ""
+        
         
 print(greatestLetter("arRAzFif"))
 
