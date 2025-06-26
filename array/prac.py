@@ -1036,9 +1036,22 @@ def greatestLetter(s):
     return ""
         
         
-print(greatestLetter("arRAzFif"))
+# print(greatestLetter("arRAzFif"))
 
+# 819. Most Common Word
+# def mostCommonWord(para,banned):
+    
 
+# print(mostCommonWord(para = "Bob hit a ball, the hit BALL flew far after it was hit.", banned = ["hit"]))
+
+#1662. Check If Two String Arrays are Equivalent
+def arrayStringsAreEqual(word1,word2):
+    w1 ="".join(word1)
+    w2 ="".join(word2)
+    return w1==w2
+
+print(arrayStringsAreEqual(word1 = ["a", "cb"], word2 = ["ab", "c"]))
+    
 
         
             
