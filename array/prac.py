@@ -1050,12 +1050,12 @@ def arrayStringsAreEqual(word1,word2):
     w2 ="".join(word2)
     return w1==w2
 
-print(arrayStringsAreEqual(word1 = ["a", "cb"], word2 = ["ab", "c"]))
+# print(arrayStringsAreEqual(word1 = ["a", "cb"], word2 = ["ab", "c"]))
     
+# 1832. Check if the Sentence Is Pangram
+def checkIfPangram(sentence):
+    return len(set(sentence)) == 26
 
-        
-            
-    
         
     
     
