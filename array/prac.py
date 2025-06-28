@@ -1056,6 +1056,34 @@ def arrayStringsAreEqual(word1,word2):
 def checkIfPangram(sentence):
     return len(set(sentence)) == 26
 
+
+# def commonCharcc(words):
+#     d = {}
+#     words = "".join(words)
+#     for i in words:
+#         if i in d:
+#             d[i]+=1
+#         else:
+#             d[i]=1
+#     l = []
+#     for i in d:
+#         if d[i]==3: 
+#             l.append(i)
+#         elif d[i]>=6:
+#             l.append(i)
+#             l.append(i)
+#     return l
+    
+
+# print(commonCharcc(words = ["bella","label","roller"]))
+
+
+
+def powerOf2(n):
+    while n%2==0:
+        n = n//2
+    return n==1
+print(powerOf2(16))
         
     
     
