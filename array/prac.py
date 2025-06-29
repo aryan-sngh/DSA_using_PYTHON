@@ -1083,7 +1083,18 @@ def powerOf2(n):
     while n%2==0:
         n = n//2
     return n==1
-print(powerOf2(16))
+# print(powerOf2(16))
+
+def powerOf3(n):
+    while n%3==0:
+        n=n//3
+    return n==1
+
+def powerOf4(n):
+    while n%4==0:
+        n = n//4
+    return n==1
+
         
     
     
