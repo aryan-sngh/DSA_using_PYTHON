@@ -1095,6 +1095,33 @@ def powerOf4(n):
         n = n//4
     return n==1
 
+
+def addDigit(num):
+    def digitSum(num):
+        ds = 0
+        while num>0:
+            u = num%10
+            ds+=u
+            num = num//10
+        if ds>=10:
+            return digitSum(ds)
+        else:
+            return ds
+        
+    # return digitSum(num)
+            
+    
+
+print(addDigit(0))
+
+def convertTemp(celsius):
+    return [celsius+273.15,celsius*1.80+32.00]
+
+print(convertTemp(36.50))
+    
+    
+            
+
         
     
     
