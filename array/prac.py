@@ -1112,12 +1112,35 @@ def addDigit(num):
             
     
 
-print(addDigit(0))
+# print(addDigit(0))
 
 def convertTemp(celsius):
     return [celsius+273.15,celsius*1.80+32.00]
 
-print(convertTemp(36.50))
+# print(convertTemp(36.50))
+
+# 2427. Number of Common Factors
+def commonFaCTORS(a,b):
+    count = 0
+    for i in range(1,max(a,b)):
+        if a%i==0 and b%i==0:
+            count+=1
+    return count
+            
+# print(commonFaCTORS(572,638))
+
+
+# 2843. Count Symmetric Integers
+def countSymmetricIntegers(low,high):
+    count = 0
+    for i in range(low,high+1):
+        if i%11==0:
+            count+=1
+    return count
+            
+        
+print(countSymmetricIntegers(low = 1, high = 100))
+
     
     
             
