@@ -1131,15 +1131,47 @@ def commonFaCTORS(a,b):
 
 
 # 2843. Count Symmetric Integers
-def countSymmetricIntegers(low,high):
-    count = 0
-    for i in range(low,high+1):
-        if i%11==0:
-            count+=1
-    return count
+# def countSymmetricIntegers(low,high):
+#     count = 0
+#     for i in range(low,high+1):
+#         if i%11==0:
+#             count+=1
+#     return count
             
         
-print(countSymmetricIntegers(low = 1, high = 100))
+# # print(countSymmetricIntegers(low = 1, high = 100))
+
+
+# 2544. Alternating Digit Sum
+def alternateDigitSum(n):
+    index = 1
+    digitsum = 0
+    n = int(str(n)[::-1])
+    while n>0:
+        u = n%10
+        if index%2==0:
+            digitsum-=u
+        else:
+            digitsum+=u
+        n = n//10
+        index+=1
+    return digitsum
+
+# print(alternateDigitSum(n = 10))
+
+def averageValue(nums):
+    s = 0
+    count = 0
+    for i in nums:
+            if i%2==0 and i%3==0:
+                s+=i
+                count+=1
+    return s//count
+
+print(averageValue(nums = [1,3,6,10,12,15]))
+
+            
+        
 
     
     
