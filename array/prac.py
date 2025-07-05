@@ -1168,7 +1168,39 @@ def averageValue(nums):
                 count+=1
     return s//count
 
-print(averageValue(nums = [1,3,6,10,12,15]))
+# print(averageValue(nums = [1,3,6,10,12,15]))
+
+
+# 628. Maximum Product of Three Numbers
+
+# def maximumProduct(nums):
+#     s = list(set(nums))
+    
+#     s.sort(reverse=True)
+#     return s[0]*s[1]*s[2]
+
+# print(maximumProduct([-1,-2,-3]))
+    
+    
+# 2535. Difference Between Element Sum and Digit Sum of an Array
+def dfffOfSum(nums):
+    s = sum(nums)
+    def digitSum(num):
+        ds = 0
+        while num>0:
+            u = num%10
+            ds+=u
+            num = num//10
+        return ds
+    final = 0
+    for i in nums:
+        final+=digitSum(i)
+        
+    return s-final
+
+            
+    
+print(dfffOfSum(nums = [1,2,3,4]))
 
             
         
