@@ -1200,7 +1200,26 @@ def dfffOfSum(nums):
 
             
     
-print(dfffOfSum(nums = [1,2,3,4]))
+# print(dfffOfSum(nums = [1,2,3,4]))
+
+# 1941. Check if All Characters Have Equal Number of Occurrences
+def areOccurenceEqual(s):
+    d = {}
+    for i in s:
+        if i in d:
+            d[i]+=1
+        else:
+            d[i]=1
+        prev = d[i]
+    for key in d:
+        if d[key] != prev:
+            return False
+        
+    return True
+            
+
+print(areOccurenceEqual(s = "aaabb"))
+    
 
             
         
