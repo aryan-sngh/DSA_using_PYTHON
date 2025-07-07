@@ -1218,15 +1218,54 @@ def areOccurenceEqual(s):
     return True
             
 
-print(areOccurenceEqual(s = "aaabb"))
+# print(areOccurenceEqual(s = "aaabb"))
+import string
+# 819. Most Common Word
+# def mostCommonWord(paragrap,banned):
+#     paragrap = (paragrap.translate(str.maketrans('', '', string.punctuation))).lower()
+#     banned = "".join(banned)
+#     p = paragrap.split()
+#     p.remove(banned)
+#     maxCount = 0
+#     maxitem = None
+#     for i in p:
+#         c = p.count(i)
+#         if c>maxCount:
+#             maxCount = c
+#             maxitem = i
+#     return maxitem
+    
+
+# print(mostCommonWord(paragrap = "Bob hit a ball, the hit BALL flew far after it was hit.", banned = ["hit"]))
     
 
             
-        
 
-    
-    
+# 1903. Largest Odd Number in String
+def largestOdd(num):
+    # num = int(num)
+    # if num%2!=0:
+    #     return num
+    # else:
+    #     check = 0
+    #     m = 0
+    #     while num>0:
+    #         u = num%10
+    #         if u%2!=0:
+    #             if u>m:
+    #                 m = u
+    #         num = num//10
             
+    # if m == 0:
+    #     return ""
+    # else:
+    #     return str(m)
+    
+    for i in range(len(num)-1,-1,-1):
+        if int(num[i])%2!=0:
+            return num[:i+1]
+        return ""
+print(largestOdd("4206"))
 
         
     
