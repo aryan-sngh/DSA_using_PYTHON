@@ -1265,7 +1265,23 @@ def largestOdd(num):
         if int(num[i])%2!=0:
             return num[:i+1]
         return ""
-print(largestOdd("4206"))
+# print(largestOdd("4206"))
+
+# 2119. A Number After a Double Reversal
+def isSameAfterReversals(num):
+    rev = str(int(str(num)[::-1]))
+    # num = str(num)
+    # for i in num:
+    #     if i not in rev:
+    #         return False
+    # return True
+    rev2 = int(rev[::-1])
+    return rev2
+            
+    
+    
+
+print(isSameAfterReversals(1800))
 
         
     
