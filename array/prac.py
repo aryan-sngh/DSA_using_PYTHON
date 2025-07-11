@@ -1281,12 +1281,48 @@ def isSameAfterReversals(num):
     
     
 
-print(isSameAfterReversals(1800))
+# print(isSameAfterReversals(1800))
 
-        
+
+
+# 1021. Remove Outermost Parentheses
+
+# def removeOuterParantheses(s):
+
+# 1790. Check if One String Swap Can Make Strings Equal
+# def areAlmostEqual(s1,s2):
+#     l1 = list(s1)
+#     l2 = list(s2)
+#     l1[0],l1[len(s1)-1] = l1[len(s1)-1],l1[0]
+#     l2[0],l2[len(s2)-1] = l2[len(s2)-1],l2[0]
+#     swap1 = "".join(l1)
+#     swap2 = "".join(l2)
+#     if s1 == s2:
+#         return True
+#     if s1 == swap2:
+#         return True
+#     if swap1 == s2:
+#         return True
+#     return False
     
-    
-            
+# print(areAlmostEqual(s1 = "attack", s2 = "defend"))
+
+
+
+def numOfStrings(patterns,word):
+    # index = 0
+    # count = 0
+    # while index<len(patterns)-1:
+    #     if patterns[index] in word:
+    #         count+=1
+    #         index+=1
+    # return count
+    count = 0
+    for i in patterns:
+        if i in word:
+            count+=1
+    return count
+print(numOfStrings(patterns = ["a","b","c"], word = "aaaaabbbbb"))
             
             
             
